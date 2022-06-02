@@ -2,14 +2,6 @@
 from add_0 import add
 
 def main():
-    """
-
-
-    print the result of addition betwen 2 numbers
-
-
-    """
-
     a = 1
     b = 2
 
