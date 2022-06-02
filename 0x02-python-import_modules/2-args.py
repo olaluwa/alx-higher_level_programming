@@ -1,20 +1,23 @@
 #!/usr/bin/python3
-
 import sys
 
-def main(*argv):
-    i = 0
-    1 = len(sys.argv) - 1
-    if 1 == 1:
-        print("{:d} argument: ".format(1))
-    elif 1 == 0:
-        print("{:d} argument: ".format(1))
-    else:
-        print("{:d} argument: ".format(1))
-    for args in sys.argv:
-        if (i != 0):
-            print("{}: {}".format(i, args))
-        i += 1
+if __name__ == '__main__':
+    """Prints the argument list passed to the program
 
-if __name__ == "__main__":
-    main()
+    The program takes all the arguments starting from the second
+    and prints the number of arguments and their value
+
+    """
+    av = sys.argv
+    l_av = len(av) - 1
+
+    if l_av > 1:
+        print(l_av, 'arguments:')
+        for i in range(1, l_av + 1):
+            print('{:d}: {}'.format(i, av[i]))
+    elif l_av == 1:
+        print(l_av, 'argument:')
+        for i in range(1, l_av + 1):
+            print('{:d}: {}'.format(i, av[i]))
+    elif l_av == 0:
+        print(l_av, 'arguments.')
