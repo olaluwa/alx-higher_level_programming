@@ -1,1 +1,2 @@
-# Java-Script Warm Up
+Introduction to javascript
+3 Semester

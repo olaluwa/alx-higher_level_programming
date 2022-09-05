@@ -1,18 +1,15 @@
 #!/usr/bin/node
-function nextBiggest (arr) {
-  let max = 0; let result = 0;
-
-  for (const value of arr) {
-    const nr = Number(value);
-
-    if (nr > max) {
-      [result, max] = [max, nr];
-    } else if (nr < max && nr > result) {
-      result = nr;
+const args = process.argv;
+let largest = parseInt(args[2]);
+let second = largest;
+if (args.length < 4) {
+  console.log(0);
+} else {
+  for (let i = 2; i < args.length; i++) {
+    if (args[i] > largest) {
+      second = largest;
+      largest = parseInt(args[i]);
     }
   }
-
-  return result;
+  console.log(second);
 }
-
-console.log(nextBiggest(process.argv));
